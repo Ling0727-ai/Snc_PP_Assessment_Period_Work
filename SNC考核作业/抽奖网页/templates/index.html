@@ -79,7 +79,7 @@
             var ranges = values.map(function (value) {
                 return value / total;
             });
-            var cumulativeRanges = ranges.reduce(function (acc, range) {
+            var Ranges = ranges.reduce(function (acc, range) {
                 if (acc.length === 0) {
                     acc.push(range);
                 } else {
@@ -89,8 +89,8 @@
             }, []);
 
             var randomNum = Math.random();
-            var prizeIndex = cumulativeRanges.findIndex(function (cumulativeRange) {
-                return randomNum < cumulativeRange;
+            var prizeIndex = Ranges.findIndex(function (Range) {
+                return randomNum < Range;
             });
 
             var selectedPrize = prizes[prizeIndex]; // 使用prizeIndex来获取选中的奖品
